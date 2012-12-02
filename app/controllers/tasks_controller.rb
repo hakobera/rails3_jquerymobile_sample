@@ -1,7 +1,11 @@
 class TasksController < ApplicationController
 
 	def index
-		@tasks = Task.all
+		if params[:filter] == 'none'
+			@tasks = Task.where{ (deadline_at >= Date.today) }
+		else
+			@tasks = Task.where{ (deadline_at >= Date.today) & (is_complete == false) }
+		end
 	end
 
 	def new
@@ -23,6 +27,7 @@ class TasksController < ApplicationController
 
 	def update
 		@task = Task.find(params[:id])
+		logger.debug(params[:task])
 
 		if @task.update_attributes(params[:task])
 			redirect_to tasks_url, notice: 'Task was successfully updated.'

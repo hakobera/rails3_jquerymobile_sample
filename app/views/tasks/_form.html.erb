@@ -19,6 +19,12 @@
     <%= f.label :deadline_at %>
     <%= f.date_select :deadline_at %>
   </div>
+  <% if button_label == 'Update' %>
+  <div>
+    <%= f.check_box :is_complete %>
+    <%= f.label :is_complete %>
+  </div>
+  <% end %>
   <div class="actions">
     <button type="submit" data-theme="b"><%= button_label %></button>
   </div>

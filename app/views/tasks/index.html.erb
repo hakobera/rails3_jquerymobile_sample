@@ -1,6 +1,13 @@
 <div data-role="header">
 	<h1>Tasks</h1>
 	<%= link_to 'Add', new_task_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+
+	<div data-role="navbar">
+		<ul>
+			<li><%= link_to 'Imcompleted Only', tasks_path(filter: "incompleted_only"), (params[:filter].nil? or params[:filter] == "incompleted_only") ? { "class" => "ui-btn-active ui-state-persist" } : {} %></li>
+			<li><%= link_to 'All', tasks_path(filter: "none"), params['filter'] == "none" ? { "class" => "ui-btn-active ui-state-persist" } : {} %></li>
+		</ul>
+	</div>
 </div>
 
 <div data-role="content">

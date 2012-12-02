@@ -16,5 +16,5 @@ class Task < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 100 }
   validates :deadline_at, presence: true
 
-  default_scope order: 'tasks.deadline_at DESC'
+  default_scope order: 'tasks.deadline_at ASC'
 end
