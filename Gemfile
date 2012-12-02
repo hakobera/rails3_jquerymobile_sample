@@ -9,11 +9,11 @@ gem 'sqlite3', '1.3.5'
 gem 'squeel', '1.0.13'
 
 group :development, :test do
-	gem 'rspec-rails', '2.11.0'
+  gem 'rspec-rails', '2.11.0'
 end
 
 group :development do
-	gem 'annotate', '2.5.0'
+  gem 'annotate', '2.5.0'
 end
 
 # Gems used only for assets and not required
@@ -28,8 +28,9 @@ gem 'jquery-rails', '2.0.2'
 gem 'jquery_mobile_rails', '1.2.0'
 
 group :test do
-	gem 'capybara', '1.1.2'
-	gem 'factory_girl_rails', '4.1.0'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'rake'
 end
 
 # To use ActiveModel has_secure_password
