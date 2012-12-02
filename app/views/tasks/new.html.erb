@@ -1,0 +1,8 @@
+<div data-role="header">
+	<%= link_to 'Back', tasks_path, "data-icon" => "back", "class" => "ui-btn-left" %>
+	<h1>Create Task</h1>
+</div>
+
+<div data-role="content">
+  <%= render :partial => 'form', :locals => { :button_label => 'Create' } %>
+</div>

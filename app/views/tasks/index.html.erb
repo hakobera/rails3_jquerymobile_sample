@@ -1,0 +1,13 @@
+<div data-role="header">
+	<h1>Tasks</h1>
+	<%= link_to 'Add', new_task_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+</div>
+
+<div data-role="content">
+	<ul data-role="listview">
+	<% @tasks.each do |task| %>
+		<li data-role="list-divider" style="padding: 0.1em 15px;"><%= task.deadline_at %></li>
+		<li><%= link_to task.title, edit_task_path(task) %></li>
+	<% end %>
+	</ul>
+</div>
