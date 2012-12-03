@@ -30,6 +30,9 @@ gem 'jquery_mobile_rails', '1.2.0'
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'simplecov', :require => false
+
+  # for TravisCI
   gem 'rake'
 end
 
